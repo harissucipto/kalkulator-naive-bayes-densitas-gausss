@@ -8474,7 +8474,7 @@ react-dev-utils@^9.1.0:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@16.11.0:
+react-dom@^16.11.0:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.11.0.tgz#7e7c4a5a85a569d565c2462f5d345da2dd849af5"
   integrity sha512-nrRyIUE1e7j8PaXSPtyRKtz+2y9ubW/ghNgqKFHHAHaeP0fpF5uXR+sq8IMRHC+ZUxw7W9NyCDTBtwWxvkb0iA==
@@ -8555,7 +8555,7 @@ react-scripts@3.2.0:
   optionalDependencies:
     fsevents "2.0.7"
 
-react@16.11.0:
+react@^16.11.0:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.11.0.tgz#d294545fe62299ccee83363599bf904e4a07fdbb"
   integrity sha512-M5Y8yITaLmU0ynd0r1Yvfq98Rmll6q8AxaEe88c8e7LxO8fZ2cNgmFt0aGAS9wzf1Ao32NKXtCl+/tVVtkxq6g==
@@ -8563,6 +8563,11 @@ react@16.11.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+
+reactjs-localstorage@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/reactjs-localstorage/-/reactjs-localstorage-0.0.8.tgz#34934d3ec81a2326e4604617edd193e60c4ec914"
+  integrity sha512-4gtrf4O7J0trFRmX28eyypaj3v/HhAa9Z6Glv8PXD/sEkmFd+JkLn+JMynstCUfFqNJHWop9FOc8UB6Kwj4NqA==
 
 read-pkg-up@^2.0.0:
   version "2.0.0"
@@ -8952,6 +8957,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+round-to@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/round-to/-/round-to-4.0.0.tgz#7576de9f721e58bd8116757fc3ba10f44d5b3886"
+  integrity sha512-2HD3qSm7FGv1uBQywsK43YtSeXQhh5CUscaFGsvbr38oZzfLqoPQAPw2ngvpXKruAEsn7WuPXdq1mrUSkR70MQ==
+
 rsvp@^4.8.4:
   version "4.8.4"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.4.tgz#b50e6b34583f3dd89329a2f23a8a2be072845911"
@@ -9218,6 +9228,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
+
+simple-statistics@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/simple-statistics/-/simple-statistics-7.0.5.tgz#9b3e750e3d2d5647d808ab97f0c14b40aaffcb9b"
+  integrity sha512-Fz3TaU6ERtpemiNh5IVmJ93+W/kJUEAZ2MrKe2tQ8iU8aFrrwPhW+62MZE0OJlG3GKH6KgcADBz/McIx0s0NhA==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
