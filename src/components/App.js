@@ -5,11 +5,13 @@ import { ambilData, simpanData } from '../utils';
 import TambahData from './TambahData';
 import TableData from './TableData';
 import DataProbilitasKemunculan from './DataProbilitasKemunculan';
+import LakukanKlasifikasi from './LakukanKlasifikasi';
 
 export default class App extends Component {
   state = {
     data: [],
-    klasifikasiData: {}
+    klasifikasiData: {},
+    hideHasilDataTraining: false
   };
 
   fetchData() {
@@ -44,7 +46,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { data, klasifikasiData } = this.state;
+    const { data, klasifikasiData, hideHasilDataTraining } = this.state;
     return (
       <div>
         <div>
@@ -57,7 +59,18 @@ export default class App extends Component {
         </div>
         {klasifikasiData.hasilDataTraining && (
           <div>
-            <DataProbilitasKemunculan klasifikasiData={klasifikasiData} />
+            {!hideHasilDataTraining && (
+              <div>
+                <DataProbilitasKemunculan klasifikasiData={klasifikasiData} />
+                <div>
+                  <h3>
+                    Persentasi Akurat DataTraining:{' '}
+                    {klasifikasiData.checkPersentasiKeAkuratan()}%
+                  </h3>
+                </div>
+              </div>
+            )}
+            <LakukanKlasifikasi klasifikasiData={klasifikasiData} />
           </div>
         )}
       </div>

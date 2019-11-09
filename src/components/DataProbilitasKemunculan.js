@@ -7,7 +7,7 @@ export default class DataProbilitasKemunculan extends Component {
       hasilDataTrainingY,
       dataTraining
     } = this.props.klasifikasiData;
-    console.log(this.props.klasifikasiData);
+
     return (
       <div>
         {hasilDataTraining.map((item, index) => {
@@ -22,7 +22,7 @@ export default class DataProbilitasKemunculan extends Component {
                   <thead>
                     <tr>
                       {item.data.map((prob, probKey) => (
-                        <th>{prob.labelY}</th>
+                        <th key={prob.labelY}>{prob.labelY}</th>
                       ))}
                     </tr>
                   </thead>
@@ -30,8 +30,8 @@ export default class DataProbilitasKemunculan extends Component {
                     <tr>
                       {item.data.map((prob, probKey) => (
                         <td key={probKey}>
-                          {prob.dataX.map(dataX => (
-                            <p>{dataX.value}</p>
+                          {prob.dataX.map((dataX, key) => (
+                            <p key={key}>{dataX.value}</p>
                           ))}
                         </td>
                       ))}
@@ -61,7 +61,7 @@ export default class DataProbilitasKemunculan extends Component {
                 <thead>
                   <tr>
                     {hasilDataTrainingY.data.map((prob, probKey) => (
-                      <th>{prob.labelY}</th>
+                      <th key={probKey}>{prob.labelY}</th>
                     ))}
                   </tr>
                 </thead>
@@ -69,8 +69,8 @@ export default class DataProbilitasKemunculan extends Component {
                   <tr>
                     {hasilDataTrainingY.data.map((prob, probKey) => (
                       <td key={probKey}>
-                        {prob.dataX.map(dataX => (
-                          <p>{dataX.value}</p>
+                        {prob.dataX.map((dataX, i) => (
+                          <p key={i}>{dataX.value}</p>
                         ))}
                       </td>
                     ))}

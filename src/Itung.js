@@ -169,12 +169,27 @@ export default class klasifikasiData {
       };
     });
 
-    return dataLikehood;
+    const totalNilaiLikeHood = dataLikehood.reduce(
+      (acc, value) => acc + value.nilaiLikehood,
+      0
+    );
+    const mappingDataLikehood = dataLikehood.map(item => {
+      const hasilNilaiLikehood = item.nilaiLikehood / totalNilaiLikeHood;
+      return {
+        ...item,
+        totalNilaiLikeHood,
+        hasilNilaiLikehood
+      };
+    });
+
+    return mappingDataLikehood;
   }
 
   menentukanGolongan(dataLikehood) {
     // const semuanyaTidak0
-    const isSemuanya0 = dataLikehood.every(item => item.nilaiLikehood === 0);
+    const isSemuanya0 = dataLikehood.every(
+      item => item.hasilNilaiLikehood === 0
+    );
     if (isSemuanya0)
       return {
         hasil:
@@ -184,7 +199,7 @@ export default class klasifikasiData {
     const [head, ...tail] = dataLikehood;
 
     const palingTinggi = tail.reduce((acc, value) => {
-      if (acc.nilaiLikehood > value.nilaiLikehood) {
+      if (acc.hasilNilaiLikehood > value.hasilNilaiLikehood) {
         return acc;
       }
       return value;
